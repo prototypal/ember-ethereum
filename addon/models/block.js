@@ -3,6 +3,7 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   hash: DS.attr(),
   parentHash: DS.attr(),
+  parent: DS.belongsTo('block', { inverse: null }),
   number: DS.attr(),
   timestamp: DS.attr(),
   nonce: DS.attr(),
