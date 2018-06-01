@@ -1,8 +1,7 @@
-{{log 'block' model}}
 <h3>block #{{model.id}}</h3>
 <table>
   <tr><td>hash:</td><td>{{model.hash}}</td></tr>
-  <tr><td>parentHash:</td><td>{{model.parentHash}}</td></tr>
+  <tr><td>parentHash:</td><td>{{#link-to 'block' model.parentHash}}{{model.parentHash}}{{/link-to}}</td></tr>
   <tr><td>number:</td><td>{{model.number}}</td></tr>
   <tr><td>timestamp:</td><td>{{model.timestamp}}</td></tr>
   <tr><td>nonce:</td><td>{{model.nonce}}</td></tr>
@@ -11,10 +10,9 @@
   <tr><td>gasUsed:</td><td>{{model.gasUsed}}</td></tr>
   <tr><td>miner:</td><td>{{model.miner}}</td></tr>
   <tr><td>extraData:</td><td>{{model.extraData}}</td></tr>
-  <tr><td>transactions:</td><td>
+  <tr><td valign=top>transactions:</td><td>
     <table>
       {{#each model.transactions as |tx|}}
-        {{log 'tx:' tx}}
         <tr><td>{{#link-to 'transaction' tx}}{{tx}}{{/link-to}}</td></tr>
       {{/each}}
     </table>

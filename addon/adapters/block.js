@@ -6,7 +6,9 @@ export default EthereumAdapter.extend({
       res.id = res.hash;
       return res;
     }, (err) => {
+      id;
       debugger;
+      throw err;
     });
   }
 });

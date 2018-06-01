@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  redirect() {
-    this.transitionTo('block', 'latest');
+  model({ id }) {
+    return this.store.findRecord('block', id);
   }
 });

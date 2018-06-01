@@ -7,7 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('block', { path: 'block/:id' });
   this.route('transaction', { path: 'tx/:id'});
+  this.route('account', { path: 'account/:id'});
 });
 
 export default Router;

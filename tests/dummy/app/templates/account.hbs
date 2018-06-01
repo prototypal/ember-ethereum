@@ -1,0 +1,18 @@
+<h3>account #{{model.id}}</h3>
+<table>
+  <tr><td>balance:</td><td>{{model.balance}}</td></tr>
+  <tr><td>transactionCount:</td><td>{{model.transactionCount}}</td></tr>
+  <tr><td valign=top>history:</td><td>
+    <table>
+      {{#if model.history.isPending}}
+        Loading...
+      {{else if model.history.isRejected}}
+        <b>ERROR</b>
+      {{else}}
+        {{#each model.history as |tx|}}
+          <tr><td>{{#link-to 'transaction' tx.hash}}{{tx.hash}}{{/link-to}}</td></tr>
+        {{/each}}
+      {{/if}}
+    </table>
+  </td></tr>
+</table>
