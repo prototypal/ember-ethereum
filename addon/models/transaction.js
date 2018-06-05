@@ -2,13 +2,13 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   hash: DS.attr(),
-  blockHash: DS.attr(),
+  blockHash: DS.belongsTo('block'),
   blockNumber: DS.attr(),
   transactionIndex: DS.attr(),
-  from: DS.attr(),
+  from: DS.belongsTo('account'),
   gasPrice: DS.attr(),
   gasLimit: DS.attr(),
-  to: DS.attr(),
+  to: DS.belongsTo('account'),
   value: DS.attr(),
   nonce: DS.attr(),
   extraData: DS.attr(),

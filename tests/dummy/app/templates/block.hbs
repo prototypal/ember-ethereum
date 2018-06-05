@@ -1,7 +1,7 @@
 <h3>block #{{model.id}}</h3>
 <table>
   <tr><td>hash:</td><td>{{model.hash}}</td></tr>
-  <tr><td>parentHash:</td><td>{{#link-to 'block' model.parent.id}}{{model.parent.id}}{{/link-to}}</td></tr>
+  <tr><td>parentHash:</td><td>{{#link-to 'block' model.parentHash.id}}{{model.parentHash.id}}{{/link-to}}</td></tr>
   <tr><td>number:</td><td>{{model.number}}</td></tr>
   <tr><td>timestamp:</td><td>{{model.timestamp}}</td></tr>
   <tr><td>nonce:</td><td>{{model.nonce}}</td></tr>
@@ -13,7 +13,7 @@
   <tr><td valign=top>transactions:</td><td>
     <table>
       {{#each model.transactions as |tx|}}
-        <tr><td>{{#link-to 'transaction' tx}}{{tx}}{{/link-to}}</td></tr>
+        <tr><td>{{#link-to 'transaction' tx}}{{tx.id}}{{/link-to}}</td></tr>
       {{/each}}
     </table>
   </td></tr>

@@ -1,13 +1,13 @@
 <h3>transaction #{{model.id}}</h3>
 <table>
   <tr><td>hash:</td><td>{{model.hash}}</td></tr>
-  <tr><td>blockHash:</td><td>{{#link-to 'block' model.blockHash}}{{model.blockHash}}{{/link-to}}</td></tr>
+  <tr><td>blockHash:</td><td>{{#link-to 'block' model.blockHash.id}}{{model.blockHash.id}}{{/link-to}}</td></tr>
   <tr><td>blockNumber:</td><td>{{model.blockNumber}}</td></tr>
   <tr><td>transactionIndex:</td><td>{{model.transactionIndex}}</td></tr>
-  <tr><td>from:</td><td>{{#link-to 'account' model.from}}{{model.from}}{{/link-to}}</td></tr>
+  <tr><td>from:</td><td>{{#link-to 'account' model.from.id}}{{model.from.id}}{{/link-to}}</td></tr>
   <tr><td>gasPrice:</td><td>{{model.gasPrice}}</td></tr>
   <tr><td>gasLimit:</td><td>{{model.gasLimit}}</td></tr>
-  <tr><td>to:</td><td>{{#link-to 'account' model.to}}{{model.to}}{{/link-to}}</td></tr>
+  <tr><td>to:</td><td>{{#link-to 'account' model.to.id}}{{model.to.id}}{{/link-to}}</td></tr>
   <tr><td>value:</td><td>{{model.value}}</td></tr>
   <tr><td>nonce:</td><td>{{model.nonce}}</td></tr>
   <tr><td>extraData:</td><td>{{model.extraData}}</td></tr>
